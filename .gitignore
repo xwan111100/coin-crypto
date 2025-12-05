@@ -1,1 +1,25 @@
-/vendor
+/vendor# Folder vendor (PHPUnit & dependencies)
+vendor/
+
+# Composer files jika tidak digunakan
+composer.lock
+
+# Cache atau file temporary
+*.cache
+*.log
+
+# Sistem file (macOS / Windows)
+.DS_Store
+Thumbs.db
+
+# Environment variables (API KEY)
+.env
+.env.local
+
+# PHPStorm / VSCode
+.idea/
+.vscode/
+
+# Backup files
+*.bak
+*.tmp
