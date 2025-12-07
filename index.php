@@ -3,9 +3,8 @@
 $apiKey = "coinrankingf28d9089eed52bca61534d80d7f1deac00ca224549b0bc22";
 $url = "https://api.coinranking.com/v2/coins?limit=20";
 $headers = ["x-access-token: $apiKey"];
->>>>>>> 9cac29f4d2f4fc863e40e0062efd110552f0a190
-
 $curl = curl_init();
+
 curl_setopt_array($curl, [
     CURLOPT_URL => $url,
     CURLOPT_RETURNTRANSFER => true,
