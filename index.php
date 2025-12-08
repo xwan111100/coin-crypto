@@ -1,4 +1,4 @@
-<?php
+ <?php
 // index.php
 $apiKey = "coinrankingf28d9089eed52bca61534d80d7f1deac00ca224549b0bc22";
 $url = "https://api.coinranking.com/v2/coins?limit=20";
