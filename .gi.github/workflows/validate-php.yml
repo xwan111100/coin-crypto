@@ -1,0 +1,59 @@
+name: Validate PHP Project
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # (1) File exists
+    - name: Cek file wajib ada
+      run: |
+        test -f index.php
+        test -f contact.php
+        echo "File exists check passed"
+
+    # Install PHP
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+
+    # (2) Valid Syntax
+    - name: Cek syntax PHP
+      run: |
+        php -l index.php
+        php -l contact.php
+
+    # (3) API key tidak boleh kosong
+    - name: Cek API Key tidak kosong
+      run: |
+        KEY=$(grep -oP '(?<=\$apiKey = ").*(?=";)' index.php)
+        if [ -z "$KEY" ]; then
+          echo "API KEY kosong!"
+          exit 1
+        fi
+        echo "API Key OK"
+
+    # (4 & 5) Valid JSON & HTTP 200
+    - name: Test API Response
+      run: |
+        STATUS=$(curl -s -o resp.json -w "%{http_code}" https://api.coinranking.com/v2/coins?limit=1 -H "x-access-token: $KEY")
+        echo "Status: $STATUS"
+        if [ "$STATUS" != "200" ]; then
+          echo "Response code bukan 200!"
+          exit 1
+        fi
+        
+        cat resp.json | jq . >/dev/null 2>&1
+        if [ $? -ne 0 ]; then
+          echo "JSON tidak valid!"
+          exit 1
+        fi
+        echo "JSON valid"
