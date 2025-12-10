@@ -12,8 +12,8 @@
     </testsuites>
 
     <php>
-        <!-- variabel API_KEY bisa dipakai pada test -->
-        <env name="API_KEY" value="coinrankingf28d9089eed52bca61534d80d7f1deac00ca224549b0bc22" />
+        <!-- use environment variable COINRANKING_API_KEY for tests; do not store secrets here -->
+        <env name="COINRANKING_API_KEY" value="" />
     </php>
 
 </phpunit>

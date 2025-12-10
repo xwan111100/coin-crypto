@@ -23,3 +23,6 @@ Thumbs.db
 # Backup files
 *.bak
 *.tmp
+
+# Local API key file (should not be committed)
+API Key Crypto.txt

@@ -1,1 +1,2 @@
-coinrankingf28d9089eed52bca61534d80d7f1deac00ca224549b0bc22
+REMOVED: API key moved to environment variable `COINRANKING_API_KEY`.
+Do NOT commit secrets to the repository. Rotate the key if it was previously exposed.

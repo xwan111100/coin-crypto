@@ -1,6 +1,8 @@
 <?php
-// index.php
-$apiKey = "coinrankingf28d9089eed52bca61534d80d7f1deac00ca224549b0bc22";
+$apiKey = getenv('COINRANKING_API_KEY');
+if (empty($apiKey)) {
+    die("COINRANKING_API_KEY environment variable is not set.\n");
+}
 $url = "https://api.coinranking.com/v2/coins?limit=20";
 $headers = ["x-access-token: $apiKey"];
 $curl = curl_init();
@@ -53,6 +55,12 @@ $coins = $data["data"]["coins"];
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
         <span class="navbar-brand fw-bold">Crypto REST Client</span>
+        <div class="nav ms-auto">
+            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="search.php">Search</a>
+            <a class="nav-link" href="about.php">About</a>
+            <a class="nav-link" href="contact.php">Contact</a>
+        </div>
     </div>
 </nav>
 

@@ -1,6 +1,11 @@
 <?php
-// fetch.php
-$apiKey = "coinrankingf28d9089eed52bca61534d80d7f1deac00ca224549b0bc22";
+$apiKey = getenv('COINRANKING_API_KEY');
+if (empty($apiKey)) {
+    http_response_code(500);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['error' => 'COINRANKING_API_KEY environment variable is not set']);
+    exit;
+}
 $url = "https://api.coinranking.com/v2/coins?limit=20";
 $headers = ["x-access-token: $apiKey"];
 
