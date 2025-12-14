@@ -8,7 +8,7 @@ if (!file_exists("fetch.php")) {
 // ==== RULE #3: VALIDASI API KEY ====
 $apiKey = "coinrankingf28d9089eed52bca61534d80d7f1deac00ca224549b0bc22";
 if (empty($apiKey)) {
-     die("API Key tidak boleh kosong!");
+    die("API Key tidak boleh kosong!");
 }
 
 $url = "https://api.coinranking.com/v2/coins?limit=20";
