@@ -1,13 +1,14 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-class ApiTest extends TestCase
+class FileTypeTest extends TestCase
 {
     private $apiKey;
     private $apiUrl = "https://api.coinranking.com/v2/coins?limit=1";
 
     protected function setUp(): void
     {
+        // API key must be provided via environment variable to avoid committing secrets
         $this->apiKey = getenv("COINRANKING_API_KEY");
     }
 
