@@ -320,11 +320,12 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card team-card h-100">
-                                    <div class="card-body text-center">
+                            <div class="col-12 mb-3 d-flex justify-content-center">
+                                <div class="card team-card h-100" style="width: 100%; max-width: 500px;">
+                                    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
                                         <div class="mb-3">
-                                            <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                            <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                                style="width: 80px; height: 80px;">
                                                 <span style="font-size: 30px;">📝</span>
                                             </div>
                                         </div>
@@ -334,28 +335,27 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="alert alert-secondary mt-4">
-                            <h6 class="mb-2">🏆 Visi Tim</h6>
-                            <p class="mb-0">
-                                "Menghasilkan solusi teknologi yang bermanfaat dan mudah diakses oleh masyarakat,
-                                sambil terus mengembangkan kemampuan teknis dan kolaborasi tim dalam dunia pengembangan web."
-                            </p>
+                            <div class="alert alert-secondary mt-4">
+                                <h6 class="mb-2">🏆 Visi Tim</h6>
+                                <p class="mb-0">
+                                    "Menghasilkan solusi teknologi yang bermanfaat dan mudah diakses oleh masyarakat,
+                                    sambil terus mengembangkan kemampuan teknis dan kolaborasi tim dalam dunia pengembangan web."
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="text-center mt-4">
-                    <a href="?page=home" class="btn btn-primary btn-lg">
-                        ← Kembali ke Halaman Utama
-                    </a>
+                    <div class="text-center mt-4">
+                        <a href="?page=home" class="btn btn-primary btn-lg">
+                            ← Kembali ke Halaman Utama
+                        </a>
+                    </div>
                 </div>
+            <?php endif; ?>
             </div>
-        <?php endif; ?>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
