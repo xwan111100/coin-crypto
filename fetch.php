@@ -11,6 +11,8 @@ if (file_exists(__DIR__ . '/.env')) {
     }
 }
 
+header('Content-Type: application/json; charset=utf-8');
+
 // Ambil API Key dari ENV
 $apiKey = getenv('COINRANKING_API_KEY');
 
@@ -45,5 +47,5 @@ if ($httpCode !== 200) {
     exit;
 }
 
-header('Content-Type: application/json; charset=utf-8');
+
 echo $response;
