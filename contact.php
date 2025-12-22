@@ -54,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Contact – Crypto REST Client</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body class="bg-light">
@@ -75,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
                 <li class="nav-item"><a class="nav-link active" href="contact.php">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="alamat.php">Alamat</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.php">News</a></li>
 
             </ul>
         </div>
