@@ -272,6 +272,13 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'about';
                                     <small class="text-primary">Membuat dokumentasi dan melakukan pengujian sistem</small>
                                 </div>
                             </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card team-card h-100">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                                <span style="font-size: 30px;">📝</span>
+                                            </div>
                         </div>
                         <div class="col-12 mb-3 d-flex justify-content-center">
                             <div class="card team-card h-100" style="width: 100%; max-width: 500px;">
